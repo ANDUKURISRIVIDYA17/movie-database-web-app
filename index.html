@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineInsight - Movie Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 CineInsight</h1>
+        <p class="subtitle">Search any film to see ratings, crew, and performance insights</p>
+        
+        <div class="search-box">
+            <input type="text" id="movie-input" placeholder="Enter movie name (e.g., Inception, Interstellar)...">
+            <button id="search-btn">Search</button>
+        </div>
+
+        <div id="movie-card" class="movie-card hidden">
+            <div class="movie-header">
+                <img id="movie-poster" src="" alt="Movie Poster">
+                <div class="movie-main-info">
+                    <h2 id="movie-title">Movie Title</h2>
+                    <div class="meta-row">
+                        <span id="movie-year" class="badge-meta">Year</span>
+                        <span id="movie-released" class="badge-meta">Release Date</span>
+                    </div>
+                    <div class="verdict-container">
+                        <span id="verdict-badge" class="verdict-badge">Verdict</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-details-grid">
+                <div class="detail-item">
+                    <span class="detail-label">⭐ IMDb Rating</span>
+                    <span id="movie-rating" class="detail-value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🎬 Director</span>
+                    <span id="movie-director" class="detail-value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🎭 Star Cast (Hero / Heroine)</span>
+                    <span id="movie-cast" class="detail-value">-</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">🏢 Production House</span>
+                    <span id="movie-production" class="detail-value">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
